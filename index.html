@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>RedMi Phone</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="icon">
+                    <img src="images/mi.png">
+                </div>
+                <div class="logo">
+                    <img src="images/redmi-logo.jpg">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Acesssories</a></li>
+                        <li><a href="#">Cart</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="information">
+                <div class="overlay"></div>
+                <img src="images/phone.jpg" class="mobile">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="images/camera.png">
+                        <div>
+                            <h1>camera</h1>
+                            <p>48MP AI Smart Triple Camera</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="images/processor.png">
+                        <div>
+                            <h1>processor</h1>
+                            <p>Qualcomm® Snapdragon™ 665</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="images/display.png">
+                        <div>
+                            <h1>display</h1>
+                            <p>15.46cm (6.08) Super AMOLED Display</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="images/battery.png">
+                        <div>
+                            <h1>battery</h1>
+                            <p>4030mAh, Supports 18W Fast Charge</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <img src="images/arrow.png" id="upBtn">
+                <h3>Features</h3>
+                <img src="images/arrow.png" id="downBtn">
+            </div>
+        </div>
+
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+            var downBtn = document.getElementById("downBtn");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            upBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+            downBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+        </script>
+
+    </body>
+</html> 
